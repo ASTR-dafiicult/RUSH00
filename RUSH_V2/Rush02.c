@@ -1,23 +1,23 @@
 void ft_putchar(char c);
 
-void rush(int col, int row)
+void rush(int x, int y)
 {
     int i;
     int j;
     
     i = 0;
-    while(i < row)
+    while(i < y)
     {
         j = 0;
-        while(j < col)
+        while(j < x)
         {
-            if(i == 0 && (j + 1 == col || j == 0))
+            if(i == 0 && (j + 1 == x || j == 0))
                 ft_putchar('A');
-            else if(i + 1 == row && (j + 1 == col || j == 0))
+            else if(i + 1 == y && (j + 1 == x || j == 0))
                 ft_putchar('C');
-            else if(i == 0 || i + 1 == row)
+            else if(i == 0 || i + 1 == y)
                 ft_putchar('B');
-            else if(i != 0 && (j == 0 || j + 1 == col))
+            else if(i != 0 && (j == 0 || j + 1 == x))
                 ft_putchar('B');
             else
                 ft_putchar(' ');
